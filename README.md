@@ -40,7 +40,6 @@ First, connect to the Airflow webserver, replace airflow-airflow-webserver by yo
 
 You should be in the Airflow command line now. To run the full dag:
 
-> airflow trigger_dag shopify_s3_pipeline 2019-04-01
 > airflow dags test shopify_s3_pipeline 2019-04-01
 
 If you want to execute a specific task:
