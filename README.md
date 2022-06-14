@@ -52,8 +52,9 @@ If you want to run the pipeline for a specific date range:
 
 POSTRESQL
 
-At this stage, there should be data in the Postgres database. Connect to the server:
-docker exec -it  airflow-warehouse psql -U algolia_user algolia_wh
+At this stage, there should be data in the Postgres database. 
+Connect to the server:
+> docker exec -it  airflow-warehouse psql -U algolia_user algolia_wh
 
 You can then run:
 
