@@ -73,3 +73,5 @@ You can then run:
 > SELECT * FROM SHOPIFY_CONFIGURATION;
 
 ## Logs
+
+The Airflow/logs/ folder contains subfolders with one folder with each DAG task, and then one folder daily with the log file. You can see that logs from the UI too. They can be useful to investigate issues. 
