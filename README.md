@@ -35,6 +35,14 @@ Replace ".." byt the absolute path to your Airflow installation.
 
 ## Run unit testing
 
+Connect to airflow:
+
+> docker exec -it airflow-airflow-webserver /bin/bash
+
+Run the unit test script, no error should come up:
+
+>python shopify_pipeline_test.py
+
 ## Run the pipeline
 
 To execute the pipeline you can either run it from the UI, or with the command line. Some commands below might differ slightly depending on your OS. 
