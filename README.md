@@ -49,7 +49,7 @@ If python does not find the file, it might be related to the issue described abo
 
 To execute the pipeline you can either run it from the UI, or with the command line. Some commands below might differ slightly depending on your OS. 
 
-First, connect to the Airflow webserver, replace airflow-airflow-webserver by your container name(you can find it in Docker UI or by running “docker ps”):
+First, connect to the Airflow webserver, replace "airflow-airflow-webserver" by your container name(you can find it in Docker UI or by running “docker ps”):
 
 > docker exec -it airflow-airflow-webserver /bin/bash
 
