@@ -53,21 +53,24 @@ First, connect to the Airflow webserver, replace airflow-airflow-webserver by yo
 
 > docker exec -it airflow-airflow-webserver /bin/bash
 
-You should be in the Airflow command line now. To run the full dag:
+You should be in the Airflow command line now. To run the full dag for one given day:
 
 > airflow dags test shopify_s3_pipeline 2019-04-01
 
-If you want to execute a specific task:
+If you want to execute a specific task for a given day:
 
 > airflow tasks test shopify_s3_pipeline download_from_s3 2019-04-01
 
 If you want to run the pipeline for a specific date range:
+
 > airflow dags backfill -s 2019-04-01 -e 2019-04-07 shopify_s3_pipeline
 
 POSTRESQL
 
 At this stage, there should be data in the Postgres database. 
+
 Connect to the server:
+
 > docker exec -it  airflow-warehouse psql -U algolia_user algolia_wh
 
 You can then run:
