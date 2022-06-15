@@ -57,7 +57,7 @@ You should be in the Airflow command line now. To run the full dag:
 
 If you want to execute a specific task:
 
-> airflow tasks test shopify_s3_pipeline download_from_s3 2021-04-01
+> airflow tasks test shopify_s3_pipeline download_from_s3 2019-04-01
 
 If you want to run the pipeline for a specific date range:
 > airflow dags backfill -s 2019-04-01 -e 2019-04-07 shopify_s3_pipeline
