@@ -11,7 +11,7 @@ You need to install docker, depending on your environment, follow Docker instruc
 If you have a limited RAM memory(8GO or less), you might encounter issues installing airflow, try to allocate as much memory as possible to Docker following those instructions:
 https://docs.microsoft.com/en-ie/windows/wsl/wsl-config
 
-Copy docker-compose.yml and Dockerfile to your docker home folder
+Copy "docker-compose.yml" and "Dockerfile" from the "docker" folder to your docker home folder
 
 To install the environment, run in your command line:
 > docker-compose up
@@ -23,10 +23,10 @@ You should be able to login to Airflow interface on http://localhost:8080. All c
 
 ## Pipeline installation
 
-- Copy shopify_pipeline.py into Airflow/dags/ folder
+- Copy shopify_pipeline.py from the "dags" folder into Airflow/dags/ folder
 - Connect to Airflow Webserver, click on DAG, you should see the DAG listed
 - Create a Postgresql connection in Airflow Admin/Connections (id= dwh, type=postgres, host=warehouse, schema=algolia_wh,login=algolia_user, port=5432). Password is provided in docker-compose file. 
-- Copy shopify_pipeline_test.py into the home Airflow/ folder.
+- Copy shopify_pipeline_test.py from the "testing" folder into the home Airflow/ folder.
 - If you are under windows, you might need to synchronize the linux container with the Airflow folder. Replace ContainerID with the airflow webserver container ID, which you can find in Docker UI or by running "docker ps":
 
 > Docker cp ..\Airflow\shopify_s3_pipeline_test.py ContainerID:/opt/airflow/shopify_s3_pipeline_test.py
