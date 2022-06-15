@@ -23,9 +23,9 @@ You should be able to login to Airflow interface on http://localhost:8080. All c
 
 ## Pipeline installation
 
+- Create a Postgresql connection in Airflow Admin/Connections (id= dwh, type=postgres, host=warehouse, schema=algolia_wh,login=algolia_user, port=5432). Password is provided in docker-compose file. 
 - Copy shopify_pipeline.py from the "dags" folder into Airflow/dags/ folder
 - Connect to Airflow Webserver, click on DAG, you should see the DAG listed
-- Create a Postgresql connection in Airflow Admin/Connections (id= dwh, type=postgres, host=warehouse, schema=algolia_wh,login=algolia_user, port=5432). Password is provided in docker-compose file. 
 - Copy shopify_pipeline_test.py from the "testing" folder into the home Airflow/ folder.
 - If you are under windows, you might need to synchronize the linux container with the Airflow folder. Replace ContainerID with the airflow webserver container ID, which you can find in Docker UI or by running "docker ps":
 
